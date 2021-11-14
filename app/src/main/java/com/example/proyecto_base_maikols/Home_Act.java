@@ -37,4 +37,11 @@ public class Home_Act extends AppCompatActivity {
         i.putExtras(bund);
         startActivity(i);
     }
+
+    public void Info(View view){
+        Intent i = new Intent(this, Info_Act.class);
+        startActivity(i);
+    }
+
+
 }
