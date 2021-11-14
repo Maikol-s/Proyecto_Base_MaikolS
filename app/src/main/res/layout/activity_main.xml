@@ -138,6 +138,16 @@
                     app:srcCompat="@drawable/youtubeico"
                     tools:ignore="SpeakableTextPresentCheck" />
 
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:onClick="Info"
+                    app:srcCompat="@drawable/info"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
             </LinearLayout>
 
             <TextView

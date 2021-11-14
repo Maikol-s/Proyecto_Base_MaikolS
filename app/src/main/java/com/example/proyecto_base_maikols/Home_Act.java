@@ -38,8 +38,8 @@ public class Home_Act extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void Info(View view){
-        Intent i = new Intent(this, Info_Act.class);
+    public void CerrarSesión(View view){
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 

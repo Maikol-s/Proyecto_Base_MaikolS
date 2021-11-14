@@ -157,6 +157,10 @@ public class MainActivity extends AppCompatActivity {
         i.setData(Uri.parse("https://www.twitter.com/"));
         startActivity(i);
     }
+    public void Info(View view){
+        Intent i = new Intent(this, Info_Act.class);
+        startActivity(i);
+    }
 
 
 }
