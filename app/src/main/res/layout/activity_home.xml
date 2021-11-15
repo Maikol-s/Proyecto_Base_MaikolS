@@ -87,6 +87,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="Ropa"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/iconoropa"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -97,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="Figuara"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/iconofigura"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -108,6 +110,7 @@
                     android:layout_weight="1"
                     android:adjustViewBounds="false"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="Manga"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/iconomanga"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -118,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="Peluche"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/iconopeluche"
                     tools:ignore="SpeakableTextPresentCheck" />

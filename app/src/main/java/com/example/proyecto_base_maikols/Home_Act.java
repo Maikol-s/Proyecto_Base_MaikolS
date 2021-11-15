@@ -56,6 +56,25 @@ public class Home_Act extends AppCompatActivity {
         startActivity(i);
 
     }
+    public void Ropa(View view){
+        Intent i = new Intent(this, Ropa_Act.class);
+        startActivity(i);
 
+    }
+    public void Figuara(View view){
+        Intent i = new Intent(this, Figura_Act.class);
+        startActivity(i);
+
+    }
+    public void Manga(View view){
+        Intent i = new Intent(this, Manga_Act.class);
+        startActivity(i);
+
+    }
+    public void Peluche(View view){
+        Intent i = new Intent(this, Peluche_Act.class);
+        startActivity(i);
+
+    }
 
 }

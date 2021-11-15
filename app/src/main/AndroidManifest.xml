@@ -16,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Base_MaikolS">
         <activity
+            android:name=".Peluche_Act"
+            android:exported="true" />
+        <activity
+            android:name=".Manga_Act"
+            android:exported="true" />
+        <activity
+            android:name=".Figura_Act"
+            android:exported="true" />
+        <activity
+            android:name=".Ropa_Act"
+            android:exported="true" />
+        <activity
             android:name=".NuevoP_Act"
             android:exported="true" />
         <activity

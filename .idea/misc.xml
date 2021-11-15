@@ -4,15 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/drawable/gradient_background.xml" value="0.2203125" />
-        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_figura.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_info.xml" value="0.18" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_insumos.xml" value="0.22" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_manga.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_maps.xml" value="0.1" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_nuevo_pact.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_pedido_cact.xml" value="0.1" />
+        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_pedido_cact.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_pedido_his.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_pedido_nact.xml" value="0.22" />
+        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_peluche.xml" value="0.33" />
+        <entry key="..\:/Users/Maikol/Proyecto_Base_MaikolS/app/src/main/res/layout/activity_ropa.xml" value="0.33" />
       </map>
     </option>
   </component>

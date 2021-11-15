@@ -48,7 +48,7 @@ public class NuevoP_Act extends AppCompatActivity {
         if (!anim.isEmpty() && !categ.isEmpty() && !nom.isEmpty() && !codigo.isEmpty()){
             ContentValues con = new ContentValues();
             con.put("codigo",codi);
-            con.put("nombre",codigo);
+            con.put("nombre",nom);
             con.put("categoria",categ);
             con.put("anime",anim);
             bd.insert("Nuevo",null,con);
