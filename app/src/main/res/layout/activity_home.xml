@@ -159,17 +159,19 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:backgroundTint="#1F6C22"
-                        android:onClick="Insumos"
+                        android:onClick="Productos"
                         android:text="Mis Productos"
                         app:cornerRadius="20dp" />
 
                     <Button
-                        android:id="@+id/button11"
+                        android:id="@+id/button10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:backgroundTint="#1F6C22"
-                        android:text="Pedido Nuevo"
+                        android:minHeight="48dp"
+                        android:onClick="PedidoCompra"
+                        android:text="Pedido Compra"
                         app:cornerRadius="20dp" />
 
                 </TableRow>
@@ -179,13 +181,13 @@
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/button10"
+                        android:id="@+id/button11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:backgroundTint="#1F6C22"
-                        android:minHeight="48dp"
-                        android:text="Pedido Compra"
+                        android:onClick="PedidoHistorial"
+                        android:text="Historial "
                         app:cornerRadius="20dp" />
 
                     <Button

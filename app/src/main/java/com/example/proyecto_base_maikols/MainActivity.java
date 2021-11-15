@@ -105,40 +105,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//Inicio Sección sin la Tarea Asincronica
-
-/*    public void IniciarSesion(View view){
-        String userObj = adm.getUser().toString().trim();
-        String passObj = adm.getPass().toString().trim();
-
-        String usu = usuario.getText().toString().trim();
-        String contraseña = password.getText().toString().trim();
-
-        switch (usu)
-        {
-            case "Maikol":
-                if (usu.equals(userObj) && contraseña.equals(passObj)){
-                    mensaje.setText("");
-                    Toast.makeText(this,"Sesion Iniciada", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(this, Home_Act.class);
-                    startActivity(i);
-                }
-                break;
-
-            case "":
-                if (usu.equals("") && contraseña.equals("")){
-                    mensaje.setText("Por Favor Rellene los Campos");
-                }
-                break;
-
-            default:
-                if (!usu.equals(userObj) && !contraseña.equals(passObj)){
-                    mensaje.setText("Algunos de los Campos son Incorrecto");
-                }
-                break;
-        }
-    }*/
-
     public void CerrarApp(View view){
         finish();
     }

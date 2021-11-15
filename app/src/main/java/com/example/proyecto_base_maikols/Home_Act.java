@@ -30,7 +30,7 @@ public class Home_Act extends AppCompatActivity {
 
     }
 
-    public void Insumos(View view){
+    public void Productos(View view){
         Intent i = new Intent(this, Insumos_Act.class);
         Bundle bund = new Bundle();
         bund.putStringArray("anime",produc.getAnime());
@@ -41,6 +41,20 @@ public class Home_Act extends AppCompatActivity {
     public void CerrarSesión(View view){
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
+    }
+
+    public void PedidoCompra(View view){
+        Intent i = new Intent(this, PedidoC_Act.class);
+        Bundle bunde = new Bundle();
+        bunde.putStringArray("codigo",produc.getCodigo());
+        i.putExtras(bunde);
+        startActivity(i);
+
+    }
+    public void PedidoHistorial(View view){
+        Intent i = new Intent(this, PedidoHis_Act.class);
+        startActivity(i);
+
     }
 
 

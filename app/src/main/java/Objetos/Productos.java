@@ -2,6 +2,7 @@ package Objetos;
 
 public class Productos {
     private int id;
+    private String[] codigo = {"Figur4one","Mang4blech","Peluche3koro","Rop4itachi"};
     private String[] anime = {"Luffy Gear Fourth","Bleach, Vol.73: Battlefield Burning","Peluche de Koro-sensei","Sudadera sobre Uchiha Itachi"};
     private String[] categoria = {"Figura","Manga","Peluche","Ropa"};
     private int[] precio = {60550,9500,16800,30000};
@@ -12,8 +13,9 @@ public class Productos {
 
     }
 
-    public Productos(int id, String[] anime, String[] categoria, int[] precio, int[] stock, int[] adicional) {
+    public Productos(int id, String[] codigo, String[] anime, String[] categoria, int[] precio, int[] stock, int[] adicional) {
         this.id = id;
+        this.codigo = codigo;
         this.anime = anime;
         this.categoria = categoria;
         this.precio = precio;
@@ -69,8 +71,22 @@ public class Productos {
         this.adicional = adicional;
     }
 
+    public String[] getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String[] codigo) {
+        this.codigo = codigo;
+    }
+
     public int add(int precio, int adicion){
         int resultado = precio + adicion;
         return resultado;
     }
+
+    public int descuentoStock(int stockA, int descuento){
+        int result = stockA - descuento;
+        return result;
+    }
+
 }
