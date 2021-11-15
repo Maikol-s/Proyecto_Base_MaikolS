@@ -186,8 +186,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:backgroundTint="#1F6C22"
-                        android:onClick="PedidoHistorial"
-                        android:text="Historial "
+                        android:onClick="NuevoPedido"
+                        android:text="Nuevo Pedido"
                         app:cornerRadius="20dp" />
 
                     <Button

@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Base_MaikolS">
         <activity
+            android:name=".NuevoP_Act"
+            android:exported="true" />
+        <activity
             android:name=".PedidoC_Act"
             android:exported="true" />
         <!--

@@ -6,20 +6,18 @@ public class Productos {
     private String[] anime = {"Luffy Gear Fourth","Bleach, Vol.73: Battlefield Burning","Peluche de Koro-sensei","Sudadera sobre Uchiha Itachi"};
     private String[] categoria = {"Figura","Manga","Peluche","Ropa"};
     private int[] precio = {60550,9500,16800,30000};
-    private int[] stock = {10,15,5,6};
     private int[] adicional = {450,500,700,600};
 
     public Productos(){
 
     }
 
-    public Productos(int id, String[] codigo, String[] anime, String[] categoria, int[] precio, int[] stock, int[] adicional) {
+    public Productos(int id, String[] codigo, String[] anime, String[] categoria, int[] precio, int[] adicional) {
         this.id = id;
         this.codigo = codigo;
         this.anime = anime;
         this.categoria = categoria;
         this.precio = precio;
-        this.stock = stock;
         this.adicional = adicional;
     }
 
@@ -55,14 +53,6 @@ public class Productos {
         this.precio = precio;
     }
 
-    public int[] getStock() {
-        return stock;
-    }
-
-    public void setStock(int[] stock) {
-        this.stock = stock;
-    }
-
     public int[] getAdicional() {
         return adicional;
     }
@@ -82,11 +72,6 @@ public class Productos {
     public int add(int precio, int adicion){
         int resultado = precio + adicion;
         return resultado;
-    }
-
-    public int descuentoStock(int stockA, int descuento){
-        int result = stockA - descuento;
-        return result;
     }
 
 }

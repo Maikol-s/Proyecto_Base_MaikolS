@@ -8,64 +8,53 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.proyecto_base_maikols.database.AdminSQLiteOpenHelper;
 
-public class PedidoC_Act extends AppCompatActivity {
+public class NuevoP_Act extends AppCompatActivity {
 
-    private Spinner codigoP;
-    private EditText cantidad,dirección,codP;
+    private EditText codigoN,nombre,categoria,anime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pedido_cact);
+        setContentView(R.layout.activity_nuevo_pact);
 
-        codigoP = (Spinner) findViewById(R.id.spnCodigo);
-        cantidad = (EditText) findViewById(R.id.editCant);
-        codP = (EditText) findViewById(R.id.editCodigo);
-        dirección = (EditText) findViewById(R.id.editDirec);
-
-
-
-        Bundle bund = getIntent().getExtras();
-        String[] listado = bund.getStringArray("codigo");
-
-        ArrayAdapter adapterCodigoP = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listado);
-        codigoP.setAdapter(adapterCodigoP);
-
-
+        codigoN = (EditText) findViewById(R.id.editCodigo);
+        nombre = (EditText) findViewById(R.id.editNom);
+        categoria = (EditText) findViewById(R.id.editCant);
+        anime = (EditText) findViewById(R.id.editDirec);
 
     }
+
 
     public void Insertar(View view){
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "AnimeShop", null,1);
         SQLiteDatabase bd = admin.getWritableDatabase();
 
-        String codigo,direc,canti ,cod;
+        String codigo,anim,categ ,nom;
 
-        codigo = codigoP.getSelectedItem().toString().trim();
-        cod = codP.getText().toString();
-        canti = cantidad.getText().toString();
-        direc = dirección.getText().toString();
-        int cantida = Integer.parseInt(canti);
-        int codi = Integer.parseInt(cod);
+        codigo = codigoN.getText().toString();
+        nom = nombre.getText().toString();
+        categ = categoria.getText().toString();
+        anim = anime.getText().toString();
+
+        int codi = Integer.parseInt(codigo);
 
 
-        if (!direc.isEmpty() && !canti.isEmpty() && !cod.isEmpty()){
+        if (!anim.isEmpty() && !categ.isEmpty() && !nom.isEmpty() && !codigo.isEmpty()){
             ContentValues con = new ContentValues();
-            con.put("codP",codi);
-            con.put("codigo",codigo);
-            con.put("cantidad",cantida);
-            con.put("direccion",direc);
-            bd.insert("Pedido",null,con);
+            con.put("codigo",codi);
+            con.put("nombre",codigo);
+            con.put("categoria",categ);
+            con.put("anime",anim);
+            bd.insert("Nuevo",null,con);
             bd.close();
             Clear();
-            Toast.makeText(getBaseContext(),"Pedido Realizado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(),"Pedido de Nuevo Producto Realizado", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -73,15 +62,16 @@ public class PedidoC_Act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "AnimeShop", null,1);
         SQLiteDatabase bd = admin.getWritableDatabase();
 
-        String codiP = codP.getText().toString();
+        String codiP = codigoN.getText().toString();
         int codi = Integer.parseInt(codiP);
 
         if (!codiP.isEmpty()){
-            Cursor cu = bd.rawQuery("SELECT cantidad, direccion FROM Pedido WHERE codP="+codi,null);
+            Cursor cu = bd.rawQuery("SELECT nombre, categoria, anime FROM Nuevo WHERE codigo="+codi,null);
             if (cu.moveToFirst()){
-              //  codigoP**
-                cantidad.setText(cu.getString(0));
-                dirección.setText(cu.getString(1));
+                //  codigoP**
+                nombre.setText(cu.getString(0));
+                categoria.setText(cu.getString(1));
+                anime.setText(cu.getString(2));
             }else{
                 Toast.makeText(getBaseContext(),"NO hay Pedido al Codigo Asociada", Toast.LENGTH_SHORT).show();
             }
@@ -99,15 +89,15 @@ public class PedidoC_Act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "AnimeShop", null,1);
         SQLiteDatabase bd = admin.getWritableDatabase();
 
-        String codiP = codP.getText().toString();
+        String codiP = codigoN.getText().toString();
         int codi = Integer.parseInt(codiP);
 
         if (!codiP.isEmpty()){
-            int delet = bd.delete("Pedido","codP="+codi, null);
+            int delet = bd.delete("Nuevo","codigo="+codi, null);
             bd.close();
             Clear();
             if (delet == 1){
-                Toast.makeText(getBaseContext(),"Eliminaste un Pedido", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Eliminaste un Pedido de Nuevo Producto", Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(getBaseContext(),"No Existe el Pedido que Desea Eliminar", Toast.LENGTH_SHORT).show();
             }
@@ -121,23 +111,23 @@ public class PedidoC_Act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "AnimeShop", null,1);
         SQLiteDatabase bd = admin.getWritableDatabase();
 
-        String codigo,direc,canti ,cod;
+        String codigo,anim,categ ,nom;
 
-        codigo = codigoP.getSelectedItem().toString().trim();
-        cod = codP.getText().toString();
-        canti = cantidad.getText().toString();
-        direc = dirección.getText().toString();
-        int cantida = Integer.parseInt(canti);
-        int codi = Integer.parseInt(cod);
+        codigo = codigoN.getText().toString().trim();
+        nom = nombre.getText().toString();
+        categ = categoria.getText().toString();
+        anim = anime.getText().toString();
 
-        if (!direc.isEmpty() && !canti.isEmpty() && !cod.isEmpty()){
+        int codi = Integer.parseInt(codigo);
+
+        if (!anim.isEmpty() && !categ.isEmpty() && !codigo.isEmpty() && !nom.isEmpty()){
             ContentValues con = new ContentValues();
-            con.put("codP",codi);
-            con.put("codigo",codigo);
-            con.put("cantidad",cantida);
-            con.put("direccion",direc);
+            con.put("codigo",codi);
+            con.put("nombre",nom);
+            con.put("categoria",categ);
+            con.put("anime",anim);
 
-            bd.update("Pedido", con,"codP="+codi, null);
+            bd.update("Nuevo", con,"codigo="+codi, null);
             bd.close();
             Clear();
             Toast.makeText(getBaseContext(),"Has Actualizado tu Pedido", Toast.LENGTH_SHORT).show();
@@ -154,8 +144,10 @@ public class PedidoC_Act extends AppCompatActivity {
 
     }
     public void Clear(){
-        cantidad.setText("");
-        codP.setText("");
-        dirección.setText("");
+        anime.setText("");
+        codigoN.setText("");
+        categoria.setText("");
+        nombre.setText("");
     }
+
 }

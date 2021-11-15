@@ -51,8 +51,8 @@ public class Home_Act extends AppCompatActivity {
         startActivity(i);
 
     }
-    public void PedidoHistorial(View view){
-        Intent i = new Intent(this, PedidoHis_Act.class);
+    public void NuevoPedido(View view){
+        Intent i = new Intent(this, NuevoP_Act.class);
         startActivity(i);
 
     }
